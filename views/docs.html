@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<p><strong>Resizer</strong></p>
+<p>To change the size of an image you can pass width and height(w and h) in the url.</p>
+<p>&nbsp;</p>
+<p>This is the default method if there is no method is defined.&nbsp;</p>
+<ol>
+    <li>Width and height<br /> To change the width and height to a fixed number.&nbsp;<br /><a href="http://localhost:3000/demo/image/upload/w_200,h_150/1.jpg">http://localhost:3000/demo/image/upload/w_200,h_150/1.jpg</a><br /><img src="http://localhost:3000/demo/image/upload/w_200,h_150/1.jpg" alt="" width="200" height="150" /><br /><br /></li>
+    <li>Only width or height<br />To change the width or height to a fixed number while scaling the other one according to original proportions.<br /><a href="http://localhost:3000/demo/image/upload/h_200/1.jpg">http://localhost:3000/demo/image/upload/h_200/1.jpg</a><br /><img src="http://localhost:3000/demo/image/upload/h_200/1.jpg" alt="" width="266" height="200" /><br /><br /><br /></li>
+    <li>Width or height between 0 and 1<br />To scale the width and height according to given value.<br /><a href="http://localhost:3000/demo/image/upload/w_.6/1.jpg">http://localhost:3000/demo/image/upload/w_.6/1.jpg</a><br /><img src="http://localhost:3000/demo/image/upload/w_.6/1.jpg" alt="" width="390" height="293" /><br /><br /></li>
+</ol>
+<p><strong>Cropper</strong>To work with cropper first you need to specify the crop function(c_crop).To crop the image you can pass x, y, width, height, gravity(x, y, w, h and g) in the url.x, y, width and height</p>
+<ol>
+    <li>To crop the image from (x, y) pixel to (x + width, y + height) pixel.<br /><a href="http://localhost:3000/demo/image/upload/c_crop,x_200,y_700,w_250,h_300/2.jpg">http://localhost:3000/demo/image/upload/c_crop,x_200,y_700,w_250,h_300/2.jpg</a><br /><img src="http://localhost:3000/demo/image/upload/c_crop,x_200,y_700,w_250,h_300/2.jpg" alt="" width="251" height="300" /><br /><br /></li>
+    <li>Gravity, width and height<br />To crop the image at the "north_east, north, north_west, west, south_west, south, south_east, east, or center" regions of the image.<a href="http://localhost:3000/demo/image/upload/c_crop,g_east,w_250,h_300/2.jpg">http://localhost:3000/demo/image/upload/c_crop,g_east,w_250,h_300/2.jpg</a><br /><img src="http://localhost:3000/demo/image/upload/c_crop,g_east,w_250,h_300/2.jpg" alt="" width="251" height="300" /><br /><br /></li>
+    <li><strong>Aspect Ratio(ar in the url)<br /></strong>To crop the image according to a new aspect ratio<br /><a href="http://localhost:3000/demo/image/upload/c_crop,ar_5/2.jpg">http://localhost:3000/demo/image/upload/c_crop,ar_5/2.jpg</a><br /><img src="http://localhost:3000/demo/image/upload/c_crop,ar_5/2.jpg" alt="" width="1279" height="255" /></li>
+</ol>
+<p><strong><br />Rotate</strong></p>
+<p>To rotate the image after the given methods are finished</p>
+<p>You need to pass an angle(a) in the url.</p>
+<p>This method will adjust width and height to fit the rotated image accordingly.</p>
+<p>For image types other than '.png' the default background color is white.</p>
+<p><a href="http://localhost:3000/demo/image/upload/c_crop,x_400,w_200,h_0,h_200,a_90/superman.jpg">http://localhost:3000/demo/image/upload/c_crop,x_400,w_200,h_0,h_200,a_90/superman.jpg</a></p>
+<p><img src="http://localhost:3000/demo/image/upload/c_crop,x_400,w_200,h_0,h_200/superman.jpg" alt="" width="200" height="200" />---------------------&gt;<img src="http://localhost:3000/demo/image/upload/c_crop,x_400,w_200,h_0,h_200,a_90/superman.jpg" alt="" width="200" height="200" /></p>
